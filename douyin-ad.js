@@ -1,5 +1,5 @@
 #抖音去广告，适用于抖音16.2.0以下版本
-
+[mitm]
 hostname =  *.snssdk.com, *.amemv.com
 
 
