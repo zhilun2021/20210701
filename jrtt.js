@@ -32,18 +32,18 @@ hostname = *.toutiaoapi.com, *.snssdk.com
 
 #圈x
 [rewrite local]
-\/score_task\/v1\/task\/(sign_in|get_read_bonus) url script-request-header https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js
-\/ttgame\/game_farm\/home_info url script-request-header https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js
+\/score_task\/v1\/task\/(sign_in|get_read_bonus) url script-request-header https://raw.githubusercontent.com/zhilun2021/20210701/main/jrtt.js
+\/ttgame\/game_farm\/home_info url script-request-header https://raw.githubusercontent.com/zhilun2021/20210701/main/jrtt.js
 [task]
-5,35 8-23 * * * https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js, tag=今日头条极速版, enabled=true
+5,35 8-23 * * * https://raw.githubusercontent.com/zhilun2021/20210701/main/jrtt.js, tag=今日头条极速版, enabled=true
 #loon
-http-request \/score_task\/v1\/task\/(sign_in|get_read_bonus) script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js, requires-body=true, timeout=10, tag=今日头条极速版sign
-http-request \/ttgame\/game_farm\/home_info script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js, requires-body=true, timeout=10, tag=今日头条极速版farm
-cron "5,35 8-23 * * *" script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js, tag=今日头条极速版
+http-request \/score_task\/v1\/task\/(sign_in|get_read_bonus) script-path=https://raw.githubusercontent.com/zhilun2021/20210701/main/jrtt.js, requires-body=true, timeout=10, tag=今日头条极速版sign
+http-request \/ttgame\/game_farm\/home_info script-path=https://raw.githubusercontent.com/zhilun2021/20210701/main/jrtt.js, requires-body=true, timeout=10, tag=今日头条极速版farm
+cron "5,35 8-23 * * *" script-path=https://raw.githubusercontent.com/zhilun2021/20210701/main/jrtt.js, tag=今日头条极速版
 #surge
-jrttsign = type=http-request,pattern=\/score_task\/v1\/task\/(sign_in|get_read_bonus),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js,script-update-interval=0
-jrttfarm = type=http-request,pattern=\/ttgame\/game_farm\/home_info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js,script-update-interval=0
-jrtt = type=cron,cronexp="5,35 8-23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js,script-update-interval=0
+jrttsign = type=http-request,pattern=\/score_task\/v1\/task\/(sign_in|get_read_bonus),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zhilun2021/20210701/main/jrtt.js,script-update-interval=0
+jrttfarm = type=http-request,pattern=\/ttgame\/game_farm\/home_info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zhilun2021/20210701/main/jrtt.js,script-update-interval=0
+jrtt = type=cron,cronexp="5,35 8-23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/zhilun2021/20210701/main/jrtt.js,script-update-interval=0
 */
 
 const $ = new Env('今日头条极速版')
