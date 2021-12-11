@@ -28,7 +28,7 @@ done 农场离线奖励(农场宝箱开完后，需要进农场再运行脚本�
 #读文章弹出金币获取读文章cookie
 
 [mitm]
-hostname = *.toutiaoapi.com
+hostname = *.toutiaoapi.com, *.snssdk.com
 
 #圈x
 [rewrite local]
@@ -264,8 +264,8 @@ $.log(jrttfarmKey)
 if($request&&$request.url.indexOf("get_read_bonus")>=0) {
   const readurlVal = $request.url.split(`?`)[1]
 
-  //const article = readurlVal.replace(/\d{3}$/,Math.floor(Math.random()*1000));
-//article = article.replace(/\d{3}$/, (Math.random()*1e3).toFixed(0).padStart(3,"0"));
+  const article = readurlVal.replace(/\d{3}$/,Math.floor(Math.random()*1000));
+ article = article.replace(/\d{3}$/, (Math.random()*1e3).toFixed(0).padStart(3,"0"));
 
     if(article) $.setdata(article,
 'article')
