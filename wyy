@@ -1,2 +1,0 @@
-http=zhi8888.ml:5566, over-tls=false, fast-open=false, udp-relay=false, server_check_url=http://interface3.music.163.com, tag=网易云音乐
-http=music.lolico.me:39000, over-tls=false, fast-open=false, udp-relay=false, server_check_url=http://interface3.music.163.com, tag=网易云音乐1
