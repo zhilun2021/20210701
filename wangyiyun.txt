@@ -1,2 +1,1 @@
-http=zhi8888.ml:5566, over-tls=false, fast-open=false, udp-relay=false, tag=网易云音乐1
-https=zhi8888.ml:6677, over-tls=false, fast-open=false, udp-relay=false, tag=网易云音乐2
+http=zhi8888.ml:5566, over-tls=false, fast-open=false, udp-relay=false, tag=网易云音乐
